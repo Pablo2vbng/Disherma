@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Representaciones Daniel Martínez - Nuestras Empresas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #f5f5f7;
+            --card-background: #ffffff;
+            --text-color-primary: #1d1d1f;
+            --text-color-secondary: #6e6e73;
+            --accent-color: #0071e3;
+            --border-color: #d2d2d7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color-primary);
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 60px; }
+        header h1 { font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 10px; }
+        header p { font-size: 1.2rem; color: var(--text-color-secondary); }
+        .empresas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .empresa-card {
+            background-color: var(--card-background);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .empresa-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+        .empresa-logo { height: 80px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; }
+        .empresa-logo img { max-height: 100%; max-width: 180px; object-fit: contain; }
+        .empresa-card h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: 15px; text-align: center; }
+        .empresa-card .description { color: var(--text-color-secondary); font-size: 0.95rem; flex-grow: 1; margin-bottom: 25px; text-align: center; }
+        .card-actions { display: flex; flex-direction: column; gap: 12px; }
+        .btn { display: inline-block; padding: 12px 20px; border-radius: 99px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background-color 0.3s ease, color 0.3s ease; text-align: center;}
+        .btn-web { background-color: var(--accent-color); color: #fff; }
+        .btn-web:hover { background-color: #0077ed; }
+        .btn-catalogo { background-color: #e8e8ed; color: var(--text-color-primary); }
+        .btn-catalogo:hover { background-color: #dcdce1; }
+        footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid var(--border-color); }
+        footer p { color: var(--text-color-secondary); font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1rem; }
+            .empresas-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="img/logo_disherno.jpeg" alt="Disherma">
+            <h1>Representaciones Daniel Martínez</h1>
+            <h2>Representaciones industriales en Aragón</h2>
+            <p>Nuestras Empresas Representadas</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="empresas-grid">
+
+                <!-- Ambro-sol -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_ambrosol.png" alt="Logo de Ambro-sol"></div>
+                        <h3>Ambro-sol</h3>
+                        <p class="description">Fabricante italiano de productos químicos y aerosoles para los sectores de automoción, industria, hogar y bricolaje.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.ambro-sol.com/es/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_ambrosol.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Celesa -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_celesa.png" alt="Logo de Celesa"></div>
+                        <h3>Celesa</h3>
+                        <p class="description">Suministro industrial especializado en abrasivos, herramientas de corte, adhesivos, protección laboral y maquinaria para profesionales.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.celesa.com/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_celesa.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- CELO Fijaciones -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_celo.png" alt="Logo de CELO Fijaciones"></div>
+                        <h3>CELO Fijaciones</h3>
+                        <p class="description">Especialistas en diseño y fabricación de tornillería y sistemas de fijación profesionales para la construcción e industria.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.celofijaciones.com/es/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_celo.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Coplasva -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_coplasva.png" alt="Logo de Coplasva"></div>
+                        <h3>Coplasva</h3>
+                        <p class="description">Fabricación de mangueras, tubos y perfiles en materiales plásticos para industria, agricultura, construcción y sector naval.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.coplasva.com/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_coplasva.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+                
+                <!-- CV Tools -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_cvtools.png" alt="Logo de CV Tools"></div>
+                        <h3>CV Tools</h3>
+                        <p class="description">Especialista en señalizacion y balizamiento horizontal y vertical, destacando su amplica gama de producto, innovación y durabilidad.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.cvtools.com/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_cvtools.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Doger -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_doger.png" alt="Logo de Doger"></div>
+                        <h3>Doger</h3>
+                        <p class="description">Marca especialista en la distribución de herramientas de corte, machos, fresas y brocas de alto rendimiento.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.aslak.es/marcas/doger" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_doger.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Escaleras Faraone -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_faraone.png" alt="Logo de Escaleras Faraone"></div>
+                        <h3>Escaleras Faraone</h3>
+                        <p class="description">Líderes en la producción de escaleras, andamios y plataformas elevadoras de aluminio para un trabajo en altura seguro.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.faraone.es/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_faraone.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Galagar -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_galagar.png" alt="Logo de Galagar"></div>
+                        <h3>Galagar</h3>
+                        <p class="description">Fabricante español de equipos de soldadura y corte, consumibles y equipos de protección individual (EPIs) para soldadores.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.galagar.com/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_galagar.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Industrial Starter -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_starter.png" alt="Logo de Industrial Starter"></div>
+                        <h3>Industrial Starter</h3>
+                        <p class="description">Especialistas en vestuario laboral, calzado de seguridad y equipos de protección individual (EPIs) para todo sector.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.industrialstarter.com/es/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_starter.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Industrias Tayg -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_tayg.png" alt="Logo de Industrias Tayg"></div>
+                        <h3>Industrias Tayg</h3>
+                        <p class="description">Empresa española dedicada a la fabricación de productos plásticos como cajas de herramientas, estanterías y contenedores.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.tayg.com/es/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_tayg.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- JAZ Surface -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_jaz.png" alt="Logo de JAZ Surface"></div>
+                        <h3>JAZ Surface Experts</h3>
+                        <p class="description">Fabricantes de cepillos de alambre de alta calidad para el tratamiento de superficies en el sector industrial.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.jaz-surface-experts.com/es/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_jaz.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Larwind Neumática -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_larwind.png" alt="Logo de Larwind Neumática"></div>
+                        <h3>Larwind Neumática</h3>
+                        <p class="description">Especialistas en herramienta neumática, compresores y soluciones de aire comprimido para la industria y la automoción.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://larwind.es/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_larwind.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Remaches Tudela -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_remaches_tudela.png" alt="Logo de Remaches Tudela"></div>
+                        <h3>Remaches Tudela</h3>
+                        <p class="description">Fabricante de sistemas de fijación, especializándose en remaches, tuercas remachables y remachadoras para la industria.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.brt.es/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_remaches_tudela.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+                
+                <!-- Tronzadoras MG -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_mg.png" alt="Logo de Tronzadoras MG"></div>
+                        <h3>Tronzadoras MG</h3>
+                        <p class="description">Fabricación y comercialización de maquinaria para el corte y deformación de aluminio, PVC y metales ligeros.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://tronzadorasmg.com/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_mg.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Urko -->
+                <div class="empresa-card">
+                    <div>
+                        <div class="empresa-logo"><img src="img/logo_urko.png" alt="Logo de Urko"></div>
+                        <h3>Urko</h3>
+                        <p class="description">Fabricantes de herramientas de apriete manual, como sargentos, mordazas y tornillos de banco para madera y metal.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://urko.com/" target="_blank" class="btn btn-web">Visitar Web</a>
+                        <a href="catalogos/catalogo_urko.pdf" download class="btn btn-catalogo">Descargar Catálogo</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Representaciones Daniel Martínez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
