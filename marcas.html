@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Marcas - Disherma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- === INICIO DE ESTILOS COMPLETOS DENTRO DEL HTML === -->
+    <style>
+        /* --- ESTILOS PARA LA PÁGINA DE MARCAS --- */
+        
+        body {
+            margin: 0;
+            background-color: #ffffff; /* Fondo blanco por defecto para el contenido */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* 1. HERO BANNER CON FONDO FIJO */
+        .page-header-banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh; /* Altura del banner */
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+
+            /* Imagen específica para esta página */
+            background-image: url('img/marcas.jpg'); 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Overlay oscuro para legibilidad */
+        .page-header-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .page-header-banner .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header-banner h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-header-banner p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* 2. Contenido Principal */
+        .page-content {
+            padding: 80px 20px;
+            background-color: #ffffff;
+            position: relative;
+            z-index: 2; /* Asegura que se deslice sobre el banner */
+        }
+        
+        /* 3. Tarjetas de Marca */
+        .brands-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .brand-card {
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .brand-card img {
+            max-height: 70px;
+            max-width: 180px;
+            object-fit: contain;
+            margin: 0 auto 25px auto;
+        }
+
+        .brand-links {
+            margin-top: auto; /* Empuja los enlaces al fondo */
+            padding-top: 20px;
+        }
+
+        .brand-links h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-top: 1px solid #dadce0;
+            padding-top: 20px;
+        }
+
+        .brand-links ul { list-style: none; padding: 0; margin: 0; }
+        .brand-links li { margin-bottom: 8px; }
+        .brand-links a { font-weight: 500; }
+        .brand-links p { font-style: italic; font-size: 1rem; }
+        
+    </style>
+    <!-- === FIN DE ESTILOS DENTRO DEL HTML === -->
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html"><img src="img/log_disherma.png" alt="Logo de Disherma" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="marcas.html" class="active">Nuestras Marcas</a></li>
+                    <li><a href="#" class="protected-link" data-href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner de Título con Fondo Fijo -->
+        <section class="page-header-banner">
+            <div class="container">
+                <h1>Nuestras Marcas Representadas</h1>
+                <p>Accede a los catálogos completos y a la web oficial de cada una de nuestras marcas.</p>
+            </div>
+        </section>
+        
+        <!-- Contenido con las tarjetas de las marcas -->
+        <div class="page-content">
+            <div class="container">
+                <div class="brands-grid-full">
+                    
+                    <!-- AMBROSOL -->
+                    <div class="brand-card">
+                        <img src="img/log_Ambrosol.png" alt="Logo Ambrosol">
+                        <div class="brand-links">
+                            <a href="https://www.ambro-sol.com/es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1QhNXj0KO4Oie_5tbF0ApIxfIOh-u1Ios/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Ambrosol.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CELO -->
+                    <div class="brand-card">
+                        <img src="img/log_Celo.png" alt="Logo Celo Fixings">
+                        <div class="brand-links">
+                            <a href="https://www.celofixings.com/es-ES/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1AclA-u8ZNmiXdm56lRkVEvV_MjWWEpPj/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Celo.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- COPLASVA -->
+                    <div class="brand-card">
+                        <img src="img/log_Coplasva.png" alt="Logo Coplasva">
+                         <div class="brand-links">
+                            <a href="https://www.coplasva.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1PQTZtoUM9BksripdcZFvyxrSWJ0IfCsG/view?usp=sharing" target="_blank" rel="noopener noreferrer">General 2023</a></li>
+                                <li><a href="https://drive.google.com/file/d/1x_kCgp41YdsQa_vhIX6DbnnidX0hWofs/view?usp=sharing" target="_blank" rel="noopener noreferrer">Hidráulica</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- CV TOOLS -->
+                     <div class="brand-card">
+                        <img src="img/log_CVTools.png" alt="Logo CV Tools">
+                         <div class="brand-links">
+                            <a href="http://cvtools.es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1iDKRNulAUeLeRXRL_5CLki0azUdcMDAb/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_CVTools.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- DOGHER -->
+                    <div class="brand-card">
+                        <img src="img/log_Dogher.png" alt="Logo Dogher Tools">
+                         <div class="brand-links">
+                            <a href="https://www.dogher.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1t7kTmc1fZ-SdRFeTQbfha0acQKzG-HAU/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Dogher.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- EUROMAQUINAS -->
+                    <div class="brand-card">
+                        <img src="img/log_euromaquinas.png" alt="Logo Euromaquinas">
+                        <div class="brand-links">
+                            <a href="https://euromaquinas.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1Az08eTaPRaOxxoWQkMBYqegVlXOc8w0t/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_euromaquinas.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- FARAONE -->
+                     <div class="brand-card">
+                        <img src="img/log_faraone.png" alt="Logo Faraone">
+                        <div class="brand-links">
+                            <a href="https://www.faraone.com/es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1H5NkIR-3vwDY8WXNaZJInSRz2wA88f-I/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_faraone.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FLORES CORTES -->
+                    <div class="brand-card">
+                        <img src="img/log_flores_cortes.png" alt="Logo Flores Cortes">
+                         <div class="brand-links">
+                            <a href="https://flores-cortes.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/18rahRaXtETVPOBMo_Vlfbj222mdD-ukE/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_flores_cortes.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- GALA GAR -->
+                    <div class="brand-card">
+                        <img src="img/log_Galagar.png" alt="Logo Gala Gar">
+                         <div class="brand-links">
+                            <a href="https://www.galagar.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1cTZ2Ysznhz0JsnCFZPuqh0_lc5d-diZx/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Galagar.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- GRUPO SANZ -->
+                    <div class="brand-card">
+                        <img src="img/log_grupo_sanz.png" alt="Logo Grupo Sanz">
+                         <div class="brand-links">
+                            <a href="https://www.gruposanz.es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1oinez8BLm8bPljxikL6ZW64RLgvL9TGD/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Grupo_Sanz.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- GRV (HYUNDAI / KOMPAK) -->
+                    <div class="brand-card">
+                        <img src="img/log_grv.png" alt="Logo GRV">
+                         <div class="brand-links">
+                            <a href="https://grv.es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1PrSQDTYxJYCJSMrFqyiNUNmyGJProtIz/view?usp=sharing" target="_blank" rel="noopener noreferrer">GRV Hyundai</a></li>
+                                <li><a href="https://drive.google.com/file/d/1Lj0xY7u0RUeBUgJfnaWXrQF7-vA4pPHj/view?usp=sharing" target="_blank" rel="noopener noreferrer">Kompak Hyundai</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- JAZ -->
+                    <div class="brand-card">
+                        <img src="img/log_jaz.png" alt="Logo Jaz">
+                         <div class="brand-links">
+                            <a href="https://www.jaz-zubiaurre.com/es" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1B05EqJaqYm2mJAUuw13X1D9MPdZSpQTg/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_jaz.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- LARWIND -->
+                    <div class="brand-card">
+                        <img src="img/log_Larwind.png" alt="Logo Larwind">
+                         <div class="brand-links">
+                            <a href="https://www.larwind.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/16H5PMjbzu6BX59kthd5TrHQuRq2s8rGJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">General</a></li>
+                                <li><a href="https://drive.google.com/file/d/1U1n2kCAPe3HbnLmS2KkFybdyT5wmLKbu/view?usp=sharing" target="_blank" rel="noopener noreferrer">Suplemento</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- MÉTRICA -->
+                    <div class="brand-card">
+                        <img src="img/log_metrica.png" alt="Logo Métrica">
+                         <div class="brand-links">
+                            <a href="https://www.metrica.es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1mbF5BAEsizk_KEhAuS1uPVIWUdx3uOd0/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Metrica.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- REMACHES TUDELA -->
+                    <div class="brand-card">
+                        <img src="img/log_remaches_tudela.png" alt="Logo Remaches Tudela">
+                         <div class="brand-links">
+                            <a href="https://www.remachestudela.com/es" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/16O2Jf4k4xwzqm_OwYcC6vPpiD2Jh8R6Y/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Remaches_Tudela.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- INDUSTRIAL STARTER -->
+                    <div class="brand-card">
+                        <img src="img/log_Starter.png" alt="Logo Industrial Starter">
+                        <div class="brand-links">
+                            <a href="https://www.industrialstarter.com/es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1dHnUf83pJr-iATCD6n9ne4OVi_n0EoVF/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Starter.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- TAYG -->
+                     <div class="brand-card">
+                        <img src="img/log_tayg.png" alt="Logo Tayg">
+                        <div class="brand-links">
+                            <a href="https://www.tayg.com/es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1zr4mZC_L1W_YUwlDMDLlWYqk8aUtm_NB/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Tayg.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- TRONZADORAS MG -->
+                     <div class="brand-card">
+                        <img src="img/log_tronazadoras_mg.png" alt="Logo Tronzadoras MG">
+                        <div class="brand-links">
+                            <a href="https://tronzadorasmg.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1nLvyHw3DAXJHtn4SGFIVpNSrnJV-lGRN/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Tronzadoras_MG.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                     <!-- URKO -->
+                    <div class="brand-card">
+                        <img src="img/log_urko.png" alt="Logo Urko">
+                         <div class="brand-links">
+                            <a href="https://urkotools.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1cxA430oLPNvZDzXL5Yr6htsMDlxJGa_O/view?usp=sharing" target="_blank" rel="noopener noreferrer">General (cat_Urko.pdf)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- CELESA BLUEMASTER -->
+                     <div class="brand-card">
+                        <img src="img/log_BlueMaster.png" alt="Logo Celesa Bluemaster">
+                        <div class="brand-links">
+                            <a href="https://www.celesatools.com/es/productos/marcas/bluemaster" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <p>Incluido en el catálogo general de la marca.</p>
+                        </div>
+                    </div>
+
+                    <!-- RUEDAS AFO -->
+                     <div class="brand-card">
+                        <img src="img/log_ruedas_Afo.png" alt="Logo Ruedas Afo">
+                        <div class="brand-links">
+                            <a href="https://www.ruedasafo.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visitar Web</a>
+                            <h4>Catálogos:</h4>
+                            <p>Consultar en web oficial.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>
+                        Ciudad del Transporte calle P, Nº 61<br>
+                        Edificio Somport, portal 3, planta 5, of. 124A<br>
+                        50820 San Juan de Mozarrifar (Zaragoza)
+                    </p>
+                    <p>
+                        <a href="mailto:info@disherma.com">info@disherma.com</a><br>
+                        Tel: <a href="tel:686926833">686 926 833</a> | Oficina: <a href="tel:876536437">876 536 437</a>
+                    </p>
+                </div>
+                <div class="footer-legal">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#" class="protected-link" data-href="aviso-legal.html">Aviso Legal</a></li>
+                        <li><a href="#" class="protected-link" data-href="politica-privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="#" class="protected-link" data-href="politica-cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Disherma - Representaciones Daniel Martínez S.L. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- El Modal de login es necesario en todas las páginas para los enlaces protegidos -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h3>Área de Clientes</h3>
+            <p><strong>Acceso exclusivo para profesionales.</strong> Introduce tus credenciales para continuar.</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required>
+                </div>
+                <p id="login-error" class="error-message">Usuario o contraseña incorrectos.</p>
+                <button type="submit" class="btn btn-primary">Acceder</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
